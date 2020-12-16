@@ -56,7 +56,113 @@ First, you need to have a local Neo4j running. The easiest way is Docker. If you
 ```
 Another option is to use Neo4j desktop, which can be downloaded from here: http://neo4j.com/download. If you chose that way, install and start as instructed by the desktop application. You need to start a new database inside desktop.
 
-1  After you have Neo4j up and running, open up a browser and goto http://localhost:7474. Enter the credentials (neo4j:secret if you chose the Docker approach above or the credentials you supplied in Neo4j Desktop). Then
+1.  After you have Neo4j up and running, open up a browser and goto http://localhost:7474. Enter the credentials (neo4j:secret if you chose the Docker approach above                         or the credentials you supplied in Neo4j Desktop). 
+
+2. click and run the Cypher statement to insert the dataset .
+
+3. Clone this project from GitHub.
+
+###  Queries Walkthrough
+
+```
+     MATCH
+	       (n)
+     RETURN
+	        n;
+
+```
+
+This query Will Shows whats actually exixts in database and how is the structure of database. 
+In terms of relationship with all of the members of the given county .
+
+
+### This query will show a user that how many nodes are in the databse It will count a total number of nodes .
+
+```
+
+     start n=node(*)
+	
+	match (n)
+	
+	return count(n)
+
+
+```
+
+### This query will Get the number of female members were there in county kerry, who run in election With there names and age .
+
+
+```
+
+     MATCH(a:constituencies{Name : "Kerry"})-[:Ran_IN_Election]-> 
+	
+	(b:candidateKerry)
+	
+	WHERE b.Gender = "Female"
+	
+	RETURN b.Name , b.Age;
+
+```
+
+
+### This query retreives a oldest man name and age who run in election in county clare.
+
+```
+     MATCH(a:constituencies{Name : "Clare"})-[:Ran_IN_Election]-> 
+	
+	(b:candidate_Clare)
+	
+	WHERE b.Age >= 70
+	
+	RETURN b.Name , b.Age;
+
+
+
+```
+
+### This query will Find the list of people who won the election for more than 12000 votes , Their Names , Total Number of votes they got And was male or female and count them how many are their were .
+
+
+```
+
+     MATCH(a:constituencies{Name : "Clare"})-[:Ran_IN_Election]-> 
+	
+	(b:candidate_Clare)
+	
+	WHERE b.TotalVotes >=12000
+	
+	RETURN b.Name , b.TotalVotes, b.Gender ,b.Age, Count(*);
+
+
+
+
+```
+
+
+
+## Built With
+* [Neo4J](http://neo4j.com/download) - Neo4j 
+
+
+
+
+## Authors
+
+[SarabDevOps](https://github.com/sarabDevOps)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/sarbjeetkumar/Neo4j-Project/blob/master/LICENSE) file for details
+
+
+
+
+
+## References
+1. [Neo4J website](http://neo4j.com/), the website of the Neo4j database.
+2. http://neo4j.com/developer/cypher/
+3. https://en.wikipedia.org/wiki/Parliamentary_constituencies_in_the_Republic_of_Ireland
+
 
 
 
