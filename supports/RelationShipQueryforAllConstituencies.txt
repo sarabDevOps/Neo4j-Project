@@ -1,0 +1,201 @@
+﻿//delete all from database 
+MATCH (n)
+OPTIONAL MATCH (n)-[r]-()
+DELETE n,r
+
+//How to delete all the relationship
+start r=relationship(*) delete r;
+
+//default relationship query
+MATCH (u:User {username:'labelHere'}), (r:Role {name:'nameHere'})
+CREATE (u)-[:Ran_In_Election]->(r)
+
+
+
+*************//RElation Ship Of County Carlow Kilkenny 
+MATCH (u:constituencies {Name:"Carlow–Kilkenny"}), (r:candidate_CK) CREATE (u)-[:Ran_IN_Election]->(r)
+
+*************//RElation Ship Of County Cavan Monaghan
+MATCH (u:constituencies {Name:"Cavan–Monaghan"}), (r:candidate_CM) CREATE (u)-[:Ran_IN_Election]->(r)
+
+*************//RElation Ship Of County Clare
+MATCH (u:constituencies {Name:"Clare"}), (r:candidate_Clare)
+CREATE (u)-[:Ran_IN_Election]->(r)
+
+
+*************//RElation Ship Of County CorkEast
+MATCH (u:constituencies {Name:"Cork East"}), (r:candidate_CorkEast)
+CREATE (u)-[:Ran_IN_Election]->(r)
+
+*************//RElation Ship Of County Cork North–West
+MATCH (u:constituencies {Name:"Cork North–West"}), (r:candidateCNW)
+CREATE (u)-[:Ran_IN_Election]->(r)
+
+
+*************//RElation Ship Of County Cork SouthCentral*********
+MATCH (u:constituencies {Name:"Cork South–Central"}), (r:candidateCSC)
+CREATE (u)-[:Ran_IN_Election]->(r)
+
+
+*************//RElation Ship Of County Cork South-West*********
+MATCH (u:constituencies {Name:"Donegal" }), (r:candidateDONE)
+CREATE (u)-[:Ran_IN_Election]->(r)
+
+
+*************//RElation Ship Of County Donegal**************
+MATCH (u:constituencies {Name:"Cork North–West"}), (r:candidateCSW)
+CREATE (u)-[:Ran_IN_Election]->(r)
+
+
+***********************//RElation Ship Of County Dublin Bay North**********
+MATCH (u:constituencies {Name:"Dublin Bay North"}), (r:candidateDublinBayN)
+CREATE (u)-[:Ran_IN_Election]->(r)
+
+*************//RElation Ship Of County Dublin Bay South**************
+MATCH (u:constituencies {Name:"Dublin Bay South"}), (r:candidateDublinBaySouth)
+CREATE (u)-[:Ran_IN_Election]->(r)
+
+*************//RElation Ship Of County Dublin Central***************
+MATCH (u:constituencies {Name:"Dublin Central"}), (r:candidateDublinCentral)
+CREATE (u)-[:Ran_IN_Election]->(r)
+
+*************//RElation Ship Of County Dublin Fingal**************
+MATCH (u:constituencies {Name:"Dublin Fingal"}), (r:candidateDublinFingal)
+CREATE (u)-[:Ran_IN_Election]->(r)
+
+
+*************//RElation Ship Of County Dublin Mid–West******************
+MATCH (u:constituencies {Name:"Dublin Mid–West"}), (r:candidateDublinMidWest)
+CREATE (u)-[:Ran_IN_Election]->(r)
+
+*************//RElation Ship Of County Dublin Rath - Down******************
+MATCH (u:constituencies {Name:"Dublin Rathdown"}), (r:candidateDublinRathdown)
+CREATE (u)-[:Ran_IN_Election]->(r)
+
+*************//RElation Ship Of County Dublin South Central******************
+MATCH (u:constituencies {Name:"Dublin South–Central"}), (r:candidateDublinSouthCentral)
+CREATE (u)-[:Ran_IN_Election]->(r)
+
+
+*************//RElation Ship Of County Dublin South West******************
+MATCH (u:constituencies {Name:"Dublin South–West"}), (r:candidateDublinSouthWest)
+CREATE (u)-[:Ran_IN_Election]->(r)
+
+
+
+*************//RElation Ship Of County Dublin West******************
+MATCH (u:constituencies {Name:"Dublin West"}), (r:candidateDublinWest)
+CREATE (u)-[:Ran_IN_Election]->(r)
+
+
+*************//RElation Ship Of County Dublin Laoghaire******************
+MATCH (u:constituencies {Name:"Dún Laoghaire"}), (r:candidateDublinLaoghaire)
+CREATE (u)-[:Ran_IN_Election]->(r)
+
+*************//RElation Ship Of County Galway East******************
+MATCH (u:constituencies {Name:"Galway East"}), (r:candidateGalwayEast)
+CREATE (u)-[:Ran_IN_Election]->(r)
+
+
+*************//RElation Ship Of County Galway West******************
+MATCH (u:constituencies {Name:"Galway West"}), (r:candidateGalwayWest)
+CREATE (u)-[:Ran_IN_Election]->(r)
+
+*************//RElation Ship Of County Kerry******************
+MATCH (u:constituencies {Name:"Kerry"}), (r:candidateKerry)
+CREATE (u)-[:Ran_IN_Election]->(r)
+
+
+*************//RElation Ship Of County Kildare North******************
+MATCH (u:constituencies {Name:"Kildare North"}), (r:candidateKildareNorth)
+CREATE (u)-[:Ran_IN_Election]->(r)
+
+
+*************//RElation Ship Of County Kildare South******************
+MATCH (u:constituencies {Name:"Kildare South"}), (r:candidateKildareSouth)
+CREATE (u)-[:Ran_IN_Election]->(r)
+
+
+*************//RElation Ship Of County Kildare Laois******************
+MATCH (u:constituencies {Name:"Laois"}), (r:candidateLaois)
+CREATE (u)-[:Ran_IN_Election]->(r)
+
+
+*************//RElation Ship Of County Limerick City******************
+MATCH (u:constituencies {Name:"Limerick City"}), (r:candidateLimerickCity)
+CREATE (u)-[:Ran_IN_Election]->(r)
+
+
+*************//RElation Ship Of County Limerick County******************
+MATCH (u:constituencies {Name:"Limerick County"}), (r:candidateLimerickCounty)
+CREATE (u)-[:Ran_IN_Election]->(r)
+
+
+*************//RElation Ship Of County Longford Westmeath******************
+MATCH (u:constituencies {Name:"Longford–Westmeath"}), (r:candidateLimerickWestmeath)
+CREATE (u)-[:Ran_IN_Election]->(r)
+
+
+*************//RElation Ship Of County Louth******************
+MATCH (u:constituencies {Name:"Louth"}), (r:candidateLouth)
+CREATE (u)-[:Ran_IN_Election]->(r)
+
+
+*************//RElation Ship Of County Mayo******************
+MATCH (u:constituencies {Name:"Mayo"}), (r:candidateMayo)
+CREATE (u)-[:Ran_IN_Election]->(r)
+
+
+
+*************//RElation Ship Of County Meath East******************
+MATCH (u:constituencies {Name:"Meath East"}), (r:candidateMeathEast)
+CREATE (u)-[:Ran_IN_Election]->(r)
+
+
+*************//RElation Ship Of County Meath West******************
+MATCH (u:constituencies {Name:"Meath West"}), (r:candidateMeathWest)
+CREATE (u)-[:Ran_IN_Election]->(r)
+
+
+
+*************//RElation Ship Of County Offaly******************
+MATCH (u:constituencies {Name:"Offaly"}), (r:candidateOffaly)
+CREATE (u)-[:Ran_IN_Election]->(r)
+
+
+*************//RElation Ship Of County RoscommonGalway******************
+MATCH (u:constituencies {Name:"Roscommon–Galway"}), (r:candidateRoscommonGalway)
+CREATE (u)-[:Ran_IN_Election]->(r)
+
+
+
+*************//RElation Ship Of County Sligo Letrim******************
+MATCH (u:constituencies {Name:"Sligo–Leitrim"}), (r:candidateSligoLeitrim)
+CREATE (u)-[:Ran_IN_Election]->(r)
+
+
+
+*************//RElation Ship Of County Tipprary******************
+MATCH (u:constituencies {Name:"Tipperary" }), (r:candidateTipperary)
+CREATE (u)-[:Ran_IN_Election]->(r)
+
+
+
+*************//RElation Ship Of County Waterford******************
+MATCH (u:constituencies {Name:"Waterford"  }), (r:candidateWaterford)
+CREATE (u)-[:Ran_IN_Election]->(r)
+
+
+*************//RElation Ship Of County Wexford******************
+MATCH (u:constituencies {Name:"Wexford"  }), (r:candidateWexford)
+CREATE (u)-[:Ran_IN_Election]->(r)
+
+*************//RElation Ship Of County Wicklow******************
+MATCH (u:constituencies {Name:"Wicklow"}), (r:candidateWicklow)
+CREATE (u)-[:Ran_IN_Election]->(r)
+
+
+
+
+
+
