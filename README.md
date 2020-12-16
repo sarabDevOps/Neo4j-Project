@@ -56,7 +56,7 @@ First, you need to have a local Neo4j running. The easiest way is Docker. If you
 ```
 Another option is to use Neo4j desktop, which can be downloaded from here: http://neo4j.com/download. If you chose that way, install and start as instructed by the desktop application. You need to start a new database inside desktop.
 
-1. After you have Neo4j up and running, open up a browser and goto http://localhost:7474. Enter the credentials (neo4j:secret if you chose the Docker approach above or the credentials you supplied in Neo4j Desktop). Then
+1  After you have Neo4j up and running, open up a browser and goto http://localhost:7474. Enter the credentials (neo4j:secret if you chose the Docker approach above or the credentials you supplied in Neo4j Desktop). Then
 
 
 
