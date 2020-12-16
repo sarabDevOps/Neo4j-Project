@@ -6,7 +6,7 @@
 #### The project is made for as a part of college work , Module GRAPH THEORY .
 
 #### Neo4j 
-![](https://github.com/sarabDevOps/RacketProject/blob/main/rpn.JPG)
+![](https://github.com/sarabDevOps/Neo4j-Project/blob/main/neo4j.JPG)
 Neo4j is the world's leading open source Graph Database which is developed using Java technology. It is highly scalable and schema free (NoSQL).
 
 A graph is a pictorial representation of a set of objects where some pairs of objects are connected by links. It is composed of two elements - nodes (vertices) and relationships (edges).
