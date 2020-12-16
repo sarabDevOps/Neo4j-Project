@@ -46,6 +46,28 @@ To create this Database all the information is retrieved from the Wikipedia , Th
 Above query shows how to create a relationship between constituency name Carlow–Kilkenny with the all the candidate of that constituency, 
 firstly we have to match the nodes together in datbase , For eg in the constituencies match a node name called Carlow–Kilkenny and match a another node in that candidate_CK and make a relationship between them and give a relationship name called a Ran_IN_Election.
 
+### Quickstart
+
+First, you need to have a local Neo4j running. The easiest way is Docker. If you have a docker installed locally, than please run .
+
+```
+     docker run --publish=7474:7474 --publish=7687:7687 -e 'NEO4J_AUTH=neo4j/secret' neo4j:4.1
+     
+```
+Another option is to use Neo4j desktop, which can be downloaded from here: http://neo4j.com/download. If you chose that way, install and start as instructed by the desktop application. You need to start a new database inside desktop.
+
+1. After you have Neo4j up and running, open up a browser and goto http://localhost:7474. Enter the credentials (neo4j:secret if you chose the Docker approach above or the credentials you supplied in Neo4j Desktop). Then
+
+
+
+
+
+
+
+
+
+
+
 
 
 
